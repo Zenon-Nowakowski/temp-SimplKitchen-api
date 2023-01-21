@@ -9,11 +9,17 @@ const connectDB = require('../../db/connect')
 // name, name_scientific, wikipedia_id, picture_file_name, picture_content_type, picture_file_size
 
 function trimObject(object) {
-    const { name, name_scientific, picture_file_name } = object
+    const { name, name_scientific, description, wikipedia_id, food_group, food_subgroup, food_type, category } = object
     const newObject = {
         "name": name,
         "name_scientific": name_scientific,
-        "picture_file_name": picture_file_name
+        "description": description,
+        "wikipedia_id": wikipedia_id,
+        "food_group": food_group,
+        "food_subgroup": food_subgroup,
+        "food_type": food_type,
+        "category": category
+
     }
     return newObject
 }
