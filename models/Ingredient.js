@@ -4,8 +4,7 @@ const IngredientSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'please provide ingredient name'],
-    },
-    foodGroup: String
-})
+    }
+}, { strict: false })
 
 module.exports = mongoose.model('Ingredient', IngredientSchema)
