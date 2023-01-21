@@ -28,10 +28,6 @@ function map(array, transform) {
 
 
 const trimmedIngredientsData = map(ingredientsData, trimObject)
-// for (let i = 0; i < 10; i++) {
-//     console.log(trimmedIngredientsData[i]);
-// }
-
 
 
 const start = async () => {
