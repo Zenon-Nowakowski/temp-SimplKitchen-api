@@ -14,20 +14,27 @@ const connectDB = require('./db/connect')
 app.use(express.json());
 // routers
 const authRouter = require('./routes/auth')
+const ingredientRouter = require('./routes/ingredients')
 
 // routes
 app.use('/api/v1/auth', authRouter)
+app.use('/api/v1', ingredientRouter)
 
 //error handling middleware
 const errorHandlerMiddleware = require('./middleware/error-handler');
 app.use(errorHandlerMiddleware);
 
 // Database
+
 app.get('/', (req, res) => {
     res.send('<h1>SimplKitchenAPI</h1><a href="/api-docs">Documentation</a>')
 })
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 
+
+// app.get('/', (req, res) => {
+//     res.send('Hello world')
+// })
 
 const port = process.env.PORT || 3000;
 
