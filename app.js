@@ -15,10 +15,12 @@ app.use(express.json());
 // routers
 const authRouter = require('./routes/auth')
 const ingredientRouter = require('./routes/ingredients')
+const pantryRouter = require('./routes/panty')
 
 // routes
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1', ingredientRouter)
+app.use('/api/v1/pantry', pantryRouter)
 
 //error handling middleware
 const errorHandlerMiddleware = require('./middleware/error-handler');
