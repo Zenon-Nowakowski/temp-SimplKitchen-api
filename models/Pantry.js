@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Ingredient = require('./Ingredient')
+// const Ingredient = require('./Ingredient')
 
 const PantrySchema = new mongoose.Schema({
     ownedBy: {
@@ -8,7 +8,7 @@ const PantrySchema = new mongoose.Schema({
         required: [true, 'Please provide user']
     },
     ingredients: {
-        type: [Ingredient],
+        type: Array,
         default: undefined
     }
 })
