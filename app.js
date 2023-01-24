@@ -10,6 +10,7 @@ const swaggerDocument = YAML.load('./swagger.yaml')
 const express = require('express')
 app = express()
 const connectDB = require('./db/connect')
+const authenticateUser = require('./middleware/authentication');
 
 app.use(express.json());
 // routers
