@@ -16,7 +16,7 @@ app.use(express.json());
 // routers
 const authRouter = require('./routes/auth')
 const ingredientRouter = require('./routes/ingredients')
-const pantryRouter = require('./routes/panty')
+const pantryRouter = require('./routes/pantry')
 
 // routes
 app.use('/api/v1/auth', authRouter)
