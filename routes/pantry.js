@@ -8,6 +8,8 @@ const {
     createIngredient
 } = require('../controllers/pantry')
 
-router.get('/ingredients', getAllIngredients)
+//router.get('/ingredients', getAllIngredients)
+router.route('/ingredients').get(getAllIngredients)
+
 
 module.exports = router
