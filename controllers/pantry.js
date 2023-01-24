@@ -14,5 +14,12 @@ const getAllIngredients = async (req,res) => {
     console.log(pantry);
     res.status(StatusCodes.OK).json({pantry})
 }
+const getIngredient = async (req, res) => {
+  res.send('getIngredient')
+}
 
-module.exports = getAllIngredients
+// module.exports = getAllIngredients
+module.exports = {
+    getAllIngredients, 
+    getIngredient
+}
