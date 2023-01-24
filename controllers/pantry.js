@@ -17,9 +17,12 @@ const getAllIngredients = async (req,res) => {
 const getIngredient = async (req, res) => {
   res.send('getIngredient')
 }
-
+const createIngredient = async (req, res) => {
+  res.send('createIngredient')
+}
 // module.exports = getAllIngredients
 module.exports = {
     getAllIngredients, 
-    getIngredient
+    getIngredient,
+    createIngredient
 }

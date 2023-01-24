@@ -2,7 +2,11 @@
 const express = require('express')
 const router = express.Router()
 
-const {getAllIngredients, getIngredient} = require('../controllers/pantry')
+const {
+    getAllIngredients, 
+    getIngredient, 
+    createIngredient
+} = require('../controllers/pantry')
 
 router.get('/ingredients', getAllIngredients)
 
