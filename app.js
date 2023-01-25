@@ -14,9 +14,9 @@ const authenticateUser = require('./middleware/authentication');
 
 app.use(express.json());
 // routers
-const authRouter = require('./routes/auth')
-const ingredientRouter = require('./routes/ingredients')
-const pantryRouter = require('./routes/pantry')
+const authRouter = require('./routes/authRouter')
+const ingredientRouter = require('./routes/ingredientsRouter')
+const pantryRouter = require('./routes/pantryRouter')
 
 // routes
 app.use('/api/v1/auth', authRouter)

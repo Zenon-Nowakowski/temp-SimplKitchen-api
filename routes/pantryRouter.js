@@ -6,7 +6,7 @@ const {
     getAllIngredients, 
     getIngredient, 
     createIngredient
-} = require('../controllers/pantry')
+} = require('../controllers/pantryController')
 
 //router.get('/ingredients', getAllIngredients)
 router.route('/ingredients').get(getAllIngredients)
