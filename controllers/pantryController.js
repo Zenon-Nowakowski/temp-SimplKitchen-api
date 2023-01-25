@@ -7,7 +7,6 @@ const getAllIngredients = async (req,res) => {
         // Use authenticaiton to change to req.user.userID
         ownedBy: '63cf029cb85efb1f1822521d'
       }
-   
     let result = Pantry.find(queryObject)
     let pantry = await result
     
