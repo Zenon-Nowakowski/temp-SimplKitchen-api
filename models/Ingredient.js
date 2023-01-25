@@ -7,15 +7,15 @@ const IngredientSchema = new mongoose.Schema({
     },
     picture_content_type: {
         type: String,
-        required: [true, 'please provide ingredient name'],
+        required: [true, 'please provide ingredient path'],
     },
     food_group: {
         type: String,
-        required: [true, 'please provide ingredient name'],
+        required: [true, 'please provide ingredient food group'],
     },
     food_subgroup: {
         type: String,
-        required: [true, 'please provide ingredient name'],
+        required: [true, 'please provide ingredient subgroup'],
     }
 }, { strict: false })
 
