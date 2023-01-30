@@ -6,6 +6,9 @@ const getAllIngredients = async (req,res) => {
     const queryObject = {
         // Use authenticaiton to change to req.user.userID
         ownedBy: '63cf029cb85efb1f1822521d'
+        //getdata ownedBy.ingredients[];
+        //for loop, i = ingredients.count()
+        //use find(), search through array with given query 
       }
     let result = Pantry.find(queryObject)
     let pantry = await result
