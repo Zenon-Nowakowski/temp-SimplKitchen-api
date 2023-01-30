@@ -3,12 +3,12 @@ const { BadRequestError, UnauthenticatedError } = require('../errors')
 const Pantry = require('../models/Pantry')
 
 const getAllIngredients = async (req,res) => {
+    res.send("getAllIngredients")
     const queryObject = {
         // Use authenticaiton to change to req.user.userID
         ownedBy: '63cf029cb85efb1f1822521d'
         //getdata ownedBy.ingredients[];
         //for loop, i = ingredients.count()
-        //use find(), search through array with given query 
       }
     let result = Pantry.find(queryObject)
     let pantry = await result
@@ -18,6 +18,11 @@ const getAllIngredients = async (req,res) => {
 }
 const getIngredient = async (req, res) => {
   res.send('getIngredient')
+  const queryObject = {
+    // Use authenticaiton to change to req.user.userID
+    ownedBy: '63cf029cb85efb1f1822521d'
+  }
+  //search array from users ingredients
 }
 const createIngredient = async (req, res) => {
   res.send('createIngredient')
